@@ -20,7 +20,7 @@ For Facebook Login, set up a project on Facebook Developers
 ## Installation
 
 Clone the repository from here:
-git clone https://github.com/shehryaarsharif/KhanaShana-Client.git
+git clone ...
 
 Then go to the local directory and run below commands:
 npm install
