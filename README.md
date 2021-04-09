@@ -30,3 +30,13 @@ npm start
 After following above steps, your browser should automatically launch. If not, open your browser and run:
 http://localhost:3000
 
+## Technology Stack
+
+React
+Redux
+Bootstrap
+React Material
+CSS/SCSS
+HTML5
+Firebase
+
