@@ -1,11 +1,11 @@
 # Decent Departmental Store
 
 
-# Getting Started
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Find the detailed instructions below:
 
-# Prerequisites
+## Prerequisites
 
 Install latest version of node: Node
 
@@ -17,7 +17,7 @@ Set up your project on Firebase
 
 For Facebook Login, set up a project on Facebook Developers
 
-# Installation
+## Installation
 
 Clone the repository from here:
 git clone https://github.com/shehryaarsharif/KhanaShana-Client.git
