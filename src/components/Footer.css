@@ -1,0 +1,39 @@
+.main-footer {
+    color: white;
+    background-color: #004C8C;
+    padding-top: 0 rem;
+    position: relative;
+    bottom: 0;
+    width:initial;
+    height:100%;
+    
+    
+  }
+  .main-footer :hover{
+    background-color: #004C8C;
+   
+    
+  }
+.col{
+    color: white !important;
+    font-size: small;
+    padding-top: 0.6rem !important;
+
+    /* padding-right: 10 rem !important; */
+
+
+
+}
+.col:hover{
+    color: #004C8C ;
+   
+    
+  }
+.hello {
+    color:#004C8C;
+}
+.is-active{
+
+  font-weight: bold;
+  color:#004C8C;
+}
