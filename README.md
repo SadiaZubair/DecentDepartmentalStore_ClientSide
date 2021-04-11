@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-Install latest version of node: [Node] (https://nodejs.org/en/download/)
+Install latest version of node: [Node](https://nodejs.org/en/download/)
 
 Install latest version of npm: [Npm](https://www.npmjs.com)
 
@@ -33,9 +33,14 @@ http://localhost:3000
 ## Technology Stack
 
 React
+
 Bootstrap
+
 React Material
+
 CSS/SCSS
+
 HTML5
+
 Firebase
 
