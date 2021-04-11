@@ -1,0 +1,34 @@
+.box1{
+    background-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    height:11rem;
+    width:11rem;
+    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+    margin: 20px;
+    text-align: center;
+    vertical-align:middle;
+    /* border: 1px outset rgb(230, 229, 229); */
+}
+
+.grid1{
+    min-height: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex: row;
+}
+.grid > div{
+    flex-basis: calc(20% -40px);
+}
+.a{
+    height: 50%;
+    width: auto;
+    margin:35px;
+    margin-bottom: 10px;
+}
+.title1{
+    font-weight:500;
+    
+}
