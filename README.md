@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-Install latest version of node: Node
+Install latest version of node: Node (https://nodejs.org/en/download/)
 
 Install latest version of npm: NPM
 
