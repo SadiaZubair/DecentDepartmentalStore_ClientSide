@@ -1,0 +1,23 @@
+
+.ticker{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    height: 25px;
+    line-height: 32px;
+    background: #0277BD;
+    position: relative;
+    color: white;
+
+   
+ }
+ .ticker_content{
+
+    white-space: nowrap;
+    color: white;
+    display: inline;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    
+ }
+ 
