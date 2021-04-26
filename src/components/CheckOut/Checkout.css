@@ -1,0 +1,37 @@
+.MuiTypography-h3{
+    padding-top: 2cm !important;
+    padding-bottom: 1cm !important;
+   padding-left: 0.25cm !important;
+    
+
+}
+.MuiTypography-h4{
+   
+    padding-left: 0.25cm !important;
+    padding-bottom: 1rem;
+    padding-top: 1cm !important;
+    padding-bottom: 0.5cm !important;
+
+}
+.text{
+    padding-top: 2cm !important;
+    padding-left: 1cm !important;
+}
+.MuiDivider-root{
+
+    padding-left: 7cm !important;
+   
+    
+    
+}
+.text1{
+    padding-top: 2cm !important;
+    padding-left: 0.5cm !important;
+    
+}
+.final{
+    padding-top: 1cm !important;
+  padding-left: 0.5cm !important;
+  font-weight: bold !important;
+  word-spacing: 400px !important;
+}
