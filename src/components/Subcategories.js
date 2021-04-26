@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import "./subcategories.css";
 import fire from "../fire";
 import category from './Categories'
+import Footer from './Footer'
+import SideCat from './HomePage/SideCat';
 const Styles = styled.div`
 .card-group{
     text-align: center;
@@ -56,83 +58,47 @@ let subcategory = match.params.subcategory;
     let history= useHistory();
    
     var name;
-   
-    const [subcat, setSubcat] = useState([
-        {
-            id: 1,
-            name: "Staples",
-            img: cocomo
-        },
-        {
-            id: 2,
-            name: "Oil & Ghee",
-            img: cocomo
-        },
-        {
-            id: 3,
-            name: "Tea & Coffee",
-            img: cocomo
-        },
-        {
-            id: 4,
-            name: "Dry Fruits",
-            img: cocomo
-        },
-        {
-            id: 5,
-            name: "Dairy and Fresh Bakery",
-            img: cocomo
-        },
-        {
-            id: 6,
-            name: "Packaged Foods",
-            img: cocomo
-        },
-        {
-            id: 3,
-            name: "Tea & Coffee",
-            img: cocomo
-        },
-        {
-            id: 4,
-            name: "Dry Fruits",
-            img: cocomo
-        },
-        {
-            id: 5,
-            name: "Dairy and Fresh Bakery",
-            img: cocomo
-        },
-        {
-            id: 6,
-            name: "Packaged Foods",
-            img: cocomo
-        }
-    ]);
+
     function onClickHandler( subcat,e){
         e.preventDefault()
+       
         const path="/categories/"+subcategory+"/"+subcat.name;
+        
         history.push(path);
+       
+       
     }
      
     //    // with backend connection subcategory prop should be used to fetch actual data from a category.
     return (
-        <>
-            <div className='grid1'>
+       <div>
+        <div className="contain">
+         <SideCat/>
+           <div >
+          
+           <div className="align"> {subcategory}</div>
+            <div  className='grid1'>
+            
            {menu.map((subcat)=>(
+            <div>
+            
+             
             <div className="box1" onClick={(e)=>onClickHandler(subcat,e)}>
                
                     <img className="a" src={subcat.img}  />
             
                 <h7 className="title1"> {subcat.name}</h7>
             </div>
+            </div>
             ))}
             </div>
-           
-           
-    
+           </div>
+    <div className="footer"> 
+        <Footer />
+      </div>
+         </div>
 
-        </>
+        </div>
     );
 
 }

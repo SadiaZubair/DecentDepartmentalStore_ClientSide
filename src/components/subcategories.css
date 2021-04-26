@@ -18,17 +18,26 @@
     display:flex;
     flex-wrap:wrap;
     flex: row;
+    padding-top: 0.25cm !important;
 }
+
 .grid > div{
     flex-basis: calc(20% -40px);
 }
 .a{
-    height: 50%;
-    width: auto;
+    height: 12vh !important;
+    width: 12vh !important;
     margin:35px;
     margin-bottom: 10px;
 }
 .title1{
     font-weight:500;
     
+}
+.align{
+    padding-top: 1.5cm !important;
+    padding-left: 0.5cm;
+    font-weight: bolder;
+    font-size: 0.5cm;
+    font-style: inherit !important;
 }
