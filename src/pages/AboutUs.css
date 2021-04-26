@@ -1,0 +1,19 @@
+.indent{
+
+    font-weight: bold;
+    padding-left: 3.0rem;
+    padding-top: 4.0rem;
+    
+
+}
+.indentpara{
+
+   
+    /* padding-left: 3.0rem; */
+    padding-top: 1.0rem;
+    text-align: left; 
+    font-weight: lighter !important;
+    text-align: justify;
+    margin-right: 1cm;
+    
+}
