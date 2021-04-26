@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
 import {NavLink,useParams} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -9,48 +8,9 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import coffee from "./final.png";
 import "./Catproducts.css";
 import fire from "../fire";
-
-
+import Footer from './Footer'
+import SideCat from './HomePage/SideCat';
 import { CartContext } from './CartContext'
-
-// let shopping_cart = [];
-
-
-// export const abc = (product) =>
-//     {
-//         let check = false;
-//         for(var i=0; i<shopping_cart.length; i++){
-//             if(shopping_cart[i].name == product.name)
-//             {
-//                 shopping_cart[i].quantity+=1;
-//                 check = true;
-//                 return;
-//             }
-//         }
-//         if(check==true){
-//         console.log(shopping_cart)
-//         }
-//         else
-//         {
-//             shopping_cart.push({"name": product.name, "price": product.price, "quantity":1})
-//             console.log(shopping_cart)
-
-//         }
-
-//         // <Cart cart = {shopping_cart} />
-
-//         return (
-//             <div>
-//             <Cart1 cart = {shopping_cart} />
-//             </div>
-//         //<Cart cart = {shopping_cart} />
-//         //<Link to={{ pathname: `/FullShoppingCart`, data: shopping_cart }}></Link>
-//         )
-       
-       
-//     }
-
-
 
 const Catproducts = ({match}) => {
 
@@ -61,7 +21,7 @@ const Catproducts = ({match}) => {
      } , ]);
 
      let list_prod=[]
-     let subcategory=match.params.subcategory;
+   let subcategory=match.params.subcategory;
    let product=match.params.products;
  const searchcatProduct = async (cat) => {
      
@@ -80,12 +40,15 @@ const Catproducts = ({match}) => {
              
              name:doc.data().title,
              img: doc.data().prodimg,
-             price: doc.data().price,
+             price: parseInt(doc.data().price),
+             discount : parseInt(doc.data().discount),
+             discountedprice: parseInt(parseInt(doc.data().price) * (1- parseInt(doc.data().discount)/100)),
+             stockvalue: parseInt(doc.data().stock)
          }
      )
-     console.log(list_prod)
      
    });
+   console.log(list_prod)
    setMenu(list_prod);
 
 
@@ -95,9 +58,7 @@ const Catproducts = ({match}) => {
      searchcatProduct();
    },[]);
    
-  console.log("helo")
-  //const data = useContext(CartContext);
-  //console.log(data)
+
   const {dispatch} = useContext(CartContext);
 
    
@@ -140,15 +101,16 @@ const Catproducts = ({match}) => {
        }
 
   ])
+  console.log(menu)
 
-//    {Catproducts.map((Catproducts)=>(
-//     <h4 key={Catproducts.id}> {Catproducts.name} </h4>
-//     ))}
-//    // with backend connection Catproductsegory prop should be used to fetch actual data from a category.
    return(
-      <>
+      <div>
+       <div className="contain">
+        <SideCat/>
+      <div >
+     <h2 className = "hide">h</h2>
      <div className='grid2'>
-   
+         
           {menu.map((Catprod)=>(
            
            <div className="box2" >
@@ -158,16 +120,24 @@ const Catproducts = ({match}) => {
                <div className="title">
                     {Catprod.name}</div>
                <div className="price">
-                  Rs. {Catprod.price}
+                  {Catprod.discount == 0 ? (
+                    <div>Rs. {Catprod.price}</div>
+                  ) : (
+                    <div>Rs. <span style={{textDecorationLine: 'line-through', textDecorationStyle: 'solid'}}>{Catprod.price}</span>{"   "+ Catprod.discountedprice}</div>
+                  )}
                </div>
-               <Button variant="primary" size="sm" style={{width:'80%',height:'fit-content', margin:'auto', marginBottom:'10px', backgroundColor:'#0277BD'}} onClick={()=>{ dispatch({type: 'ADD_TO_CART', id: Catprod.id,  product: Catprod})}}> Add to Cart </Button> 
+               <Button variant="primary" size="sm" style={{width:'80%',height:'fit-content', margin:'auto', marginBottom:'10px', backgroundColor:'#0277BD'}} onClick={()=>{ dispatch({type: 'ADD_TO_CART', id: Catprod.id, stock:Catprod.stockvalue,  product: Catprod})}}> Add to Cart </Button> 
               
            </div>
            ))}
        
            </div>
-      
-      </>
+        </div>
+           <div className="footer"> 
+        <Footer />
+      </div>
+      </div>
+      </div>
    )
   
 }

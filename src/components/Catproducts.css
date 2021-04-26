@@ -20,6 +20,9 @@
     display:flex;
     flex-wrap:wrap;
     flex: row;
+    
+   
+    
 }
 .grid2 > div{
     flex-basis: calc(20% -40px);
@@ -29,9 +32,9 @@
     grid-row: 1;
   
 }
-.b{
+.b1{
     position: relative;
-    height: auto;
+    height: 10vh !important;
     margin-top: 10px;
     width: 50%;
 }
@@ -48,4 +51,7 @@
     margin: 10px;
     size: 70%;
     text-align: center;
+}
+.hide{
+    color: white;
 }
