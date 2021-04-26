@@ -1,0 +1,39 @@
+.MuiTypography-h1{
+    padding-top: 3.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-style: formal;
+    
+    
+    
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    /* padding: 10px; */
+   
+  }
+ .pad {
+
+
+    padding-left: 1rem !important;
+    color: #0277BD !important;
+   background-color: #ffffff !important;
+   width : 8cm !important;
+   padding-left: 1rem !important;
+ }
+ .pad2 {
+
+
+    background-color: #0277BD !important;
+    color: #ffffff !important;
+    width : 8cm !important;
+   margin-left: 0.5cm !important;
+   
+ }
+ .alignment {
+
+    margin-top: 1cm;
+   padding-left: 0.75cm !important;
+ }
