@@ -34,15 +34,15 @@ function Footer() {
           {/* Column1 */}
           
           {/* Column2 */}
-          <div className="col">
+          <div className="col" >
           
-          <p>Address: Main Blvd, Block G4 Block G 4 Phase 2 Johar Town, Lahore, Punjab
+          <p >Address: Main Blvd, Block G4 Block G 4 Phase 2 Johar Town, Lahore, Punjab
           Phone: (042) 35301886
          Email:decentstorejt@gmail.com</p>
           </div>
           <div className="col">
 
-         <Nav.Item><Link to="/AboutUs" exact activeClassName ="active"  ><h6 className="col">About Us</h6></Link></Nav.Item>
+         <Nav.Item><Link to="/About Us" exact activeClassName ="active"  ><h6 className="col">About Us</h6></Link></Nav.Item>
          
          
           <Nav.Item class="login"><Link to="/FAQs"><h6 className="col"> FAQs</h6></Link></Nav.Item> 
@@ -52,8 +52,8 @@ function Footer() {
           
           <div className="col">
          
-          <Nav.Item><Link to="/Privacypolicy"><h6 className="col">Privacy Policy</h6></Link></Nav.Item>
-          <Nav.Item ><Link to="/ContactUs"><h6 className="col">Contact Us</h6></Link></Nav.Item> 
+          <Nav.Item><Link to="/Privacy Policy"><h6 className="col">Privacy Policy</h6></Link></Nav.Item>
+          <Nav.Item ><Link to="/Contact Us"><h6 className="col">Contact Us</h6></Link></Nav.Item> 
           </div>
         </div>
         <hr />
